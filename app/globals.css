@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+  }
+
+  body {
+    background-color: #070b14;
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism panel styling */
+.glass-panel {
+  background: rgba(13, 22, 41, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(6, 182, 212, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(6, 182, 212, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Maritime grid background effect */
+.bg-maritime {
+  background-color: #070b14;
+  background-image: 
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(6, 182, 212, 0.15), rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Recharts customization */
+.recharts-default-tooltip {
+  background-color: rgba(13, 22, 41, 0.95) !important;
+  border: 1px solid rgba(6, 182, 212, 0.25) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  color: #f8fafc !important;
+}

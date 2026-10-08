@@ -1,0 +1,2 @@
+total_observations,normal_observations,ml_anomaly_candidates,ml_anomaly_percentage,number_of_features,isolation_forest_trees,contamination
+358351,354767,3584,1.0001367374445724,11,200,0.01
